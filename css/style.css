@@ -1,0 +1,14 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Georgia, Garamond, Times, serif;
+}
+.contain {
+	width: 940px;
+	margin: 0 auto;
+}
+header a {
+	width: 222px;
+	display: block;
+	margin: 0 auto;
+}
