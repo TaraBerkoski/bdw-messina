@@ -105,13 +105,16 @@ nav a:hover {
 #product-list li:nth-of-type(3n){
 	margin-right: 0px;
 }
+#product-list h2, #product-list p, #product-list span {
+	position: absolute;
+	font-family: 'junction';
+	text-align: center;
+	z-index: 2;
+}
 #product-list h2, #product-list p {
 	font-size: 100%;
-	font-family: 'junction';
 	color: #f4f4f4;
 	width: 100%;
-	text-align: center;
-	position: absolute;
 	margin: auto;
 }
 #product-list h2 {
@@ -122,41 +125,52 @@ nav a:hover {
 	bottom: 10px;
 }
 #product-list span {
-	position: absolute;
 	top: 140px;
 	width: 100px;
-	height: 26px;
 	left: 50%;
-	text-align: center;
 	font-size: 75%;
-	font-family: 'junction';
 	color: #565656;
 	background-color: #ffffff;
 	text-transform: uppercase;
 	margin-left: -50px;
-	padding-top: 12px;
-	-moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,.2);
-	-webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,.2);
-	-ms-box-shadow: 2px 2px 5px 1px rgba(0,0,0,.2);
-	-o-box-shadow: 2px 2px 5px 1px rgba(0,0,0,.2);
-	box-shadow: 2px 2px 5px 1px rgba(0,0,0,.2);
+	line-height: 26px;
+	-moz-box-shadow: 2px 2px 5px rgba(0,0,0,.28);
+	-webkit-box-shadow: 2px 2px 5px rgba(0,0,0,.28);
+	-ms-box-shadow: 2px 2px 5px rgba(0,0,0,.28);
+	-o-box-shadow: 2px 2px 5px rgba(0,0,0,.28);
+	box-shadow: 2px 2px 5px rgba(0,0,0,.28);
+	border-top: 1px solid #dbdbdb;
+	border-right: 1px solid #616161;
+	border-bottom: 1px solid #616161;
+	border-left: 1px solid #dbdbdb;
 }
+#product-list a {
+	visibility: hidden;
 }
-li:after {
+#product-list li:hover a {
+	visibility: visible;
+}
+#product-list img {
+	visibility: visible;
+	position: relative;
+}
+li {
+	position: relative;
+}
+li:hover:after {
 	content: " ";
-	display: block;
 	width: 220px;
 	height: 220px;
 	position: absolute;
- 	z-index: 1;
-  	background-image: -webkit-radial-gradient(center center, circle cover, rgba(0,0,0,.08), rgba(0,0,0,.44));
-  	background-image: -moz-radial-gradient(center center, circle cover, rgba(0,0,0,.08), rgba(0,0,0,.44));
-  	background-image: -ms-radial-gradient(center center, circle cover, rgba(0,0,0,.08), rgba(0,0,0,.44));
-  	background-image: -o-radial-gradient(center center, circle cover, rgba(0,0,0,.08), rgba(0,0,0,.44));
-  	background-image: radial-gradient(center center, circle cover, rgba(0,0,0,.08), rgba(0,0,0,.44));
-}
-.third, .sixth {
-	margin-right: 0px;
+	z-index: 1;
+	top:0;
+  	background-image: -webkit-radial-gradient(110px 110px, circle closest-side, rgba(0,0,0,.08) 0%, rgba(0,0,0,.36) 100%);
+  	background-image: -moz-radial-gradient(110px 110px, circle closest-side, rgba(0,0,0,.08) 0%, rgba(0,0,0,.36) 100%);
+  	background-image: -ms-radial-gradient(110px 110px, circle closest-side, rgba(0,0,0,.08) 0%, rgba(0,0,0,.36) 100%);
+  	background-image: -o-radial-gradient(110px 110px, circle closest-side, rgba(0,0,0,.08) 0%, rgba(0,0,0,.36) 100%);
+  	background-image: radial-gradient(110px 110px, circle closest-side, rgba(0,0,0,.08) 0%, rgba(0,0,0,.36) 100%);
+  	background-color: rgba (0,0,0,.36);
+	pointer-events: none;
 }
 #search {
 	margin-bottom: 40px;
